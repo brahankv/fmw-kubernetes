@@ -518,6 +518,7 @@ function createFiles {
     sed -i -e "s:%ISTIO_PREFIX%:${istioPrefix}:g" ${createJobOutput}
     sed -i -e "s:%ISTIO_ENABLED%:${istioEnabled}:g" ${createJobOutput}
     sed -i -e "s:%ISTIO_READINESS_PORT%:${istioReadinessPort}:g" ${createJobOutput}
+    sed -i -e "s:%ISTIO_LOCALHOST_BINDING_ENABLED%:${istioLocalhostBindingsEnabled}:g" ${createJobOutput}
     sed -i -e "s:%WDT_VERSION%:${wdtVersion}:g" ${createJobOutput}
     sed -i -e "s|%DOMAIN_TYPE%|${domain_type}|g" ${createJobOutput}
     sed -i -e "s|%PROXY_VAL%|${httpsProxy}|g" ${createJobOutput}
@@ -601,6 +602,7 @@ function createFiles {
     sed -i -e "s:%ISTIO_PREFIX%:${istioPrefix}:g" ${dcrOutput}
     sed -i -e "s:%ISTIO_ENABLED%:${istioEnabled}:g" ${dcrOutput}
     sed -i -e "s:%ISTIO_READINESS_PORT%:${istioReadinessPort}:g" ${dcrOutput}
+    sed -i -e "s:%ISTIO_LOCALHOST_BINDING_ENABLED%:${istioLocalhostBindingsEnabled}:g" ${dcrOutput}
     # MII settings are used for model-in-image integration testing
     sed -i -e "s:%MII_PREFIX%:${miiPrefix}:g" ${dcrOutput}
     sed -i -e "s:%MII_CONFIG_MAP_PREFIX%:${miiConfigMapPrefix}:g" ${dcrOutput}
@@ -680,6 +682,7 @@ function updateModelFile {
   sed -i -e "s:%ISTIO_PREFIX%:${istioPrefix}:g" ${modelFile}
   sed -i -e "s:%ISTIO_ENABLED%:${istioEnabled}:g" ${modelFile}
   sed -i -e "s:%ISTIO_READINESS_PORT%:${istioReadinessPort}:g" ${modelFile}
+  sed -i -e "s:%ISTIO_LOCALHOST_BINDING_ENABLED%:${istioLocalhostBindingsEnabled}:g" ${modelFile}
   # MII settings are used for model-in-image integration testing
   sed -i -e "s:%MII_PREFIX%:${miiPrefix}:g" ${modelFile}
   sed -i -e "s:%MII_CONFIG_MAP_PREFIX%:${miiConfigMapPrefix}:g" ${modelFile}
