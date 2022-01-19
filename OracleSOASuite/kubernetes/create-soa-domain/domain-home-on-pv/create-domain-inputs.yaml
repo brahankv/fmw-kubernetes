@@ -215,9 +215,3 @@ istioEnabled: false
 
 # istioReadinessPort specifies the WebLogic NAP port for use by the readiness probe
 istioReadinessPort: 8888
-
-# istioLocalhostBindingsEnabled specifies if localhost bindings are enabled or not.
-# Supported only in Operator version 3.3.3 or later
-# Should be 'false' for Istio version 1.10 and later
-# For more details - https://oracle.github.io/weblogic-kubernetes-operator/userguide/istio/istio/#configuring-the-domain-resource
-istioLocalhostBindingsEnabled: true
